@@ -1,0 +1,38 @@
+<!-- views/fruits/new.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create a Car</title>
+</head>
+
+<body>
+  <h1>Create a New Car!</h1>
+  <form action="/cars" method="POST">
+    <div>
+      <label for="make">Make:</label>
+      <input type="text" name="make" id="make" />
+    </div>
+
+    <div>
+      <lable for="color">Color:</lable>
+      <input type="text" name="color" id="color" />
+    </div>
+
+    <div>
+      <label for="sports">Sports Car?:</label>
+      <input type="checkbox" name="sports" id="sports" />
+    </div>
+
+    <div>
+      <button type="submit">Add Car</button>
+    </div>
+  </form>
+
+  <a href="/cars/">Back to Cars</a>
+</body>
+
+</html>

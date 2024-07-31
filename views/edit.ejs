@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit <%= car.make %></h1>
+    <form action="/cars/<%=car.id%>?_method=PUT" method="POST"></form>
+        <div>
+          <label for="make">Make:</label>
+          <input type="text" name="make" id="make" />
+        </div>
+    
+        <div>
+          <lable for="color">Color:</lable>
+          <input type="text" name="color" id="color" />
+        </div>
+    
+        <div>
+          <label for="sports">Sports Car?:</label>
+          <input type="checkbox" name="sports" id="sports" />
+        </div>
+    
+        <div>
+          <button type="submit">Update Car</button>
+        </div>
+      </form>
+    
+      <a href="/cars/">Back to Cars</a>
+      <input type="text" name="make" value="<%= car.make %>" />
+      <input type="checkbox" name="sports" />
+      <input type="checkbox" name="sports" checked />
+      <input type="checkbox" name="sports" <% if (car.sports) { %>checked<% } %> >
+
+
+
+
+    
+</body>
+</html>
